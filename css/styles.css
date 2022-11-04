@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Markazi Text', serif;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);;
+  background-size: 400% 400%;
+  position: relative;
+  animation: animate 7.5s ease-in-out infinite;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes animate{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vw;
+  border-radius: 5%;
+  max-width: 50%;
+  height: auto;
+}
+/* مشخص کردن مقادیر برای ریسپانسیو کردن و سازگاری با انواع دسنگاه ها*/
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+@media only screen and (max-width: 500px){
+  .responsive {
+    width: 100%;
+  }
+}
+h{
+  color: whitesmoke;
+  text-shadow: #111;
+}
+/* مشخص کردن مقادیر برای ریسپانسیو کردن و سازگاری با انواع دسنگاه ها*/
+img{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+img:hover{
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+.head {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position:fixed;
+  top: 0;
+  width: 100%;
+}
+.head a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 100%;
+}
+.head a:hover {
+  background: #ddd;
+  color: black;
+}
+.head-1 {
+  float: left;
+}
+.head-1 a {
+  position: relative;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+.head-1 a:hover {
+  background-color: white;
+  color: black;
+}
+/* مشخص کردن مقادیر برای ریسپانسیو کردن و سازگاری با انواع دسنگاه ها*/
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+/* مشخص کردن مقادیر برای ریسپانسیو کردن و سازگاری با انواع دسنگاه ها*/
+section {
+  max-width: 95vw;
+  border: 0px #333 solid;
+  margin: auto;
+}
+#title {
+  font-size: 3vw;
+}
+#another-box{
+  text-align: center;
+  background-color: lightgrey;
+  width: 385px;
+  border: 15px solid #f3a469;
+  padding: 50px;
+  margin: auto;
+  border-radius: 20%;
+
+}
+.text{
+  text-align: center;
+  color: #f6f6f0;
+  text-shadow: 0.3vw 0.1vw black;
+}
+a {
+  cursor: pointer;
+  color: rgb(129, 51, 255);
+}
+a:hover {
+  text-decoration: dashed;
+  text-shadow: 0 1px 1px rgba(129, 51, 255, 0.4);
+}
+#install_button {
+  display: none;
+}
+.fonts {
+  float: right;
+  font-family: 'Markazi Text', serif;
+}
+#function-machine{
+  max-width: 90vw; 
+}
+#formol{
+  max-width: 90vw;
+  min-width: 50vw;
+}
+#bt {
+  --color: #560bad;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+ }
+.picture{
+  width: 900px;
+}
+#bt:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+ }
+ 
+#bt:hover {
+  color: #fff;
+ }
+ 
+#bt:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+ }
+ 
+#bt:hover:before {
+  top: -30px;
+  left: -30px;
+ }
+ 
+#bt:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+ }

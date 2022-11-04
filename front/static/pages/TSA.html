@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html dir="rtl" lang="fa-IR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Farzan</title>
+    <link rel="manifest" href="{% static 'manifest.json' %}"/>
+    <meta name="description" content="project for the comapteion pajohesh sara">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/apple-icon-57x57.png' %}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'img/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="application-name" content="Farzan" />
+    <meta name="apple-mobile-web-app-title" content="Farzan" />
+    <meta name="msapplication-starturl" content="/index.html" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" 
+    rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+    <script type="text/javascript">
+      // نصب سرویس ورکر
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register("{% static 'sw.js' %}").then(registration => {
+            console.log('SW registration succeeded:', registration);
+            navigator.serviceWorker.ready
+              .then(function (registration) {
+                console.log('SW is active:', registration.active);
+      
+      
+              });
+          }).catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+        });
+      }
+    </script>
+  </head>
+  <style>
+    div.picture {
+    max-width: 70%;
+    /* background-color: white; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1vw 1vw;
+    margin:auto;
+    }
+    
+    div.content {
+      text-align: center;
+      padding: 10px 20px;
+    }
+  </style>
+  <body>
+    <header>
+      <ul class="head">
+        <li class="head-1"><a title="خانه">خانه</a></li>
+        <li class="head-1"><a href="{% static 'pages/TABE.html' %}" title="توابع">توابع</a></li>
+        <li class="head-1"><a href="{% static 'pages/TG.html' %}" title="تابع گویا">گویا</a></li>
+        <li class="head-1"><a href="{% static 'pages/TSA.html' %}" title="تابع ثابت">ثابت</a></li>
+        <li class="head-1"><a href="{% static 'pages/geogebra.html' %}" title="geogebra">GEOGEBRA</a></li>
+      </ul>
+    </header>
+    <section id="main"><br><br><br>
+      <h1>تابع ثابت</h1>
+      <p>تابع ثابت در واقع تابعی است که از هر ورودی  خروجی یکسانی میگیرد . در توابع ثابت
+         نمودار تابع , با محور x ها مساوی است.
+      </p><br>
+      <h1>خصوصیات اصلی تابع ثابت</h1><br>
+      <p>همانطور که تصویر نشان می‌دهد، تابع ثابت، هرگز محور افقی را قطع نمی‌کند، به جز در حالتی که 
+        y = f(x) = 0 باشد که در این صورت همه مقادیر x ، ریشه‌های معادله خواهند بود. ولی در حالتی که c ≠ 0
+         تابع ثابت یا چند جمله‌ای درجه صفر، «ریشه» نخواهد داشت.</p>
+      <br><br>
+      <div class="picture">
+        <img src="{% static 'img/TSA.jpg' %}" alt="نمودار تابع گویا">
+        <div class="content">
+          <p>نمودار بالا یک نوع تابع ثابت را نشان میدهد</p><br>
+          <p><b>y = f (x)</b></p>
+        </div>
+      </div>
+      <ul><br>
+        <li><b>تابع زوج :</b></li>
+        <p>تابع ثابت یک تابع زوج است. به معنی که با قرینه کردن مقدار متغیر، مقدار تابع تغییر نخواهد کرد. بنابراین نمودار این تابع نسبت به محور عمودی، قرینه است. پس قرینه هر مقدار متغیر برای چنین تابعی باز هم متعلق به دامنه بوده و برابر با مقدار تابع در همان مقدار است و در نتیجه روی منحنی آن تابع قرار می‌گیرد.
+        </p><br>
+        <li><b>مشتق تابع ثابت :</b></li>
+        <p>براساس نحوه محاسبه مشتق، برای تابع ثابت، صفر مقدار مشتق خواهد بود. پس شیب نمودار تابع ثابت صفر بوده و هیچ پستی یا بلندی برای نمودار آن وجود ندارد.</p><br>
+        <li><b>پیوستگی تابع ثابت :</b></li>
+        <p>از آنجایی که دامنه تابع ثابت، اعداد حقیقی است و برای همه مقادیر آن، تعریف شده است، می‌توان نتیجه گرفت که این تابع روی دامنه‌اش، پیوسته خواهد بود. البته وجود مشتق برای چنین تابعی، نشانه ‌دیگری از پیوسته بودن آن است.</p><br>
+        <li><b>غیرصعودی و نزولی بودن تابع ثابت :</b></li>
+        <p>از آنجایی که مشتق تابع ثابت صفر است، چنین تابعی را نه می‌توان صعودی در نظر گرفت و نه نزولی. از طرفی مطابق با تصویر ۱ یا ۲، واضح است که تابع ثابت، یکنواخت و پیوسته محسوب می‌شود.</p><br>
+      </ul>
+    </section>
+    <!-- <footer>
+      <p class="fonts">ضمن تشکر و تقدیر از کادر پژوهش سرا</p>
+    </footer> -->
+  </body>
+</html>

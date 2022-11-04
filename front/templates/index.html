@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MR__NETWORK</title>
+    <link rel="manifest" href="{% static 'manifest.json' %}"/>
+    <meta name="description" content="project for the comapteion pajohesh sara">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/apple-icon-57x57.png' %}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'img/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="application-name" content="MR__NETWORK" />
+    <meta name="apple-mobile-web-app-title" content="MR__NETWORK" />
+    <meta name="msapplication-starturl" content="/index.html" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+    <script type="text/javascript">
+      // نصب سرویس ورکر
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register("{% static 'sw.js' %}").then(registration => {
+            console.log('SW registration succeeded:', registration);
+            navigator.serviceWorker.ready
+              .then(function (registration) {
+                console.log('SW is active:', registration.active);
+      
+      
+              });
+          }).catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+        });
+      }
+    </script>
+    <!-- <script src="sw.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <center>
+      <h1 id="title">MR__NETWORK</h1>
+      </center>
+    </header>
+    <section id="main">
+      <center>
+      <br><br>
+      <h3>Description</h3><br><br>
+      <p class="index">Hi, im Mohammad Mehdi Jafari and i decided to make this website cause in mathclass i always needed to draw Mathematical vectors. so , i wondered to bring it accessable everywhere and any platform with help of PWA</p><br>
+      </center>
+      <div id="another-box">
+        <h5><b>Ready to go</b></h5>
+        <a href="/geogebra.html"><button id="bt">GO</button></a>
+        <br><p>click on the top button to go for drawing your Mathematical vectors</p>
+      
+    </section>
+  </body>
+</html>

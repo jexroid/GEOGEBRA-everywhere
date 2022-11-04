@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html dir="rtl" lang="fa-IR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Farzan</title>
+    <link rel="manifest" href="{% static 'manifest.json' %}"/>
+    <meta name="description" content="project for the comapteion pajohesh sara">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/apple-icon-57x57.png' %}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'img/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="application-name" content="Farzan" />
+    <meta name="apple-mobile-web-app-title" content="Farzan" />
+    <meta name="msapplication-starturl" content="/index.html" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" 
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+    <script type="text/javascript">
+      // نصب سرویس ورکر
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register("{% static 'sw.js' %}").then(registration => {
+            console.log('SW registration succeeded:', registration);
+            navigator.serviceWorker.ready
+              .then(function (registration) {
+                console.log('SW is active:', registration.active);
+      
+      
+              });
+          }).catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+        });
+      }
+    </script>
+    <!-- <script src="sw.js"></script> -->
+  </head>
+  <body>
+    <header>
+      <ul class="head">
+        <li class="head-1"><a title="خانه">خانه</a></li>
+        <li class="head-1"><a href="{% static 'pages/TABE.html' %}" title="توابع">توابع</a></li>
+        <li class="head-1"><a href="{% static 'pages/TG.html' %}" title="تابع گویا">گویا</a></li>
+        <li class="head-1"><a href="{% static 'pages/TSA.html' %}" title="تابع ثابت">ثابت</a></li>
+        <li class="head-1"><a href="{% static 'pages/geogebra.html' %}" title="geogebra">GEOGEBRA</a></li>
+      </ul>
+      <h1 id="title"></h1>
+    </header>
+    <section id="main">
+      <br><br><br>
+      <h1 class="text">به نام خدا</h1>
+      <br><br>
+      <h3>ریاضی پایه یازدهم</h3><br><br>
+      <p>سلام به مشتاقان و علاقه مندان ریاضی , من امیررضا فرزان هستم و میخوایم که مبحث توابع را با دیدگاه متفاوت و شیرین یاد بگیریم</p><br>
+      <h3>چه چیز هایی یاد خواهیم گرفت ؟</h3><br>
+      <p>خب توی این پروسه , من میخواهم شما را با بعضی از تابع ها , مثل گویا و ثابت آشنا کنم که بسیار آسان هم هستند .<br>و در آخر یک ابزار محاسبه گر طراحی شده که به شما در رسم نمودار های خطی , بسیار کمک میکند. ابزاری به نام GEOGEBRA که احتمالا دوستان هنرستانی با آن آشنایی دارند </p><br>
+      <div id="another-box">
+        <h5><b>نیاز به اطلاعات بیشتر دارید؟</b></h5>
+        <a href="https://blog.faradars.org/functions/"><button id="bt">اطلاعات</button></a>
+        <br><p>از آنجایی که انواع توابع به حدی گسترده هستند که نمیتوان آن را در اینجا پوشش داد , میتوانید سایت فرادرس را برای اطلاعات بیشتر بخوانید</p>
+      
+    </section>
+    <!-- <footer>
+      <p class="fonts">ضمن تشکر و تقدیر از کادر پژوهش سرا</p>
+    </footer> -->
+  </body>
+</html>

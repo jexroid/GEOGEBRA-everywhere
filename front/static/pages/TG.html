@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html dir="rtl" lang="fa-IR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Farzan</title>
+    <link rel="manifest" href="{% static 'manifest.json' %}"/>
+    <meta name="description" content="project for the comapteion pajohesh sara">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/apple-icon-57x57.png' %}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'img/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta name="application-name" content="Farzan" />
+    <meta name="apple-mobile-web-app-title" content="Farzan" />
+    <meta name="msapplication-starturl" content="/index.html" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap" 
+    rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"/>
+    <script type="text/javascript">
+      // نصب سرویس ورکر
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register("{% static 'sw.js' %}").then(registration => {
+            console.log('SW registration succeeded:', registration);
+            navigator.serviceWorker.ready
+              .then(function (registration) {
+                console.log('SW is active:', registration.active);
+      
+      
+              });
+          }).catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+        });
+      }
+    </script>
+  <style>
+  div.picture {
+    max-width: 30%;
+  /* background-color: white; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1vw 1vw;
+  margin:auto;
+  }
+  
+  div.content {
+    text-align: center;
+    padding: 10px 20px;
+  }
+  </style>
+  <body>
+    <header>
+      <ul class="head">
+        <li class="head-1"><a title="خانه">خانه</a></li>
+        <li class="head-1"><a href="{% static 'pages/TABE.html' %}" title="توابع">توابع</a></li>
+        <li class="head-1"><a href="{% static 'pages/TG.html' %}" title="تابع گویا">گویا</a></li>
+        <li class="head-1"><a href="{% static 'pages/TSA.html' %}" title="تابع ثابت">ثابت</a></li>
+        <li class="head-1"><a href="{% static 'pages/geogebra.html' %}" title="geogebra">GEOGEBRA</a></li>
+      </ul>
+      <h1 id="title"></h1>
+    </header>
+    <br><br><br><br>
+    <section id="main">
+        <h1>توابع گویا</h1>
+        <p>هر تابعی که به شکل زیر باشد یک تابع گویا مینامیم .در شکل زیر P(x) و Q(x) چند جمله ای هستند  و به شکلی که Q(X) = 0 <b>نباشد</b></p>
+        <img src="{% static 'static/img/unknown.png' %}" alt="تابع گویا"><br>
+        <p>توجه داشته باشید که هر «تابع چند جمله‌ای» با قرار دادن مقدار (۱) در مخرج آن، به عنوان چند جمله‌ای 
+            Qx(x)
+            یا «تابع ثابت» در نقطه ۱، تبدیل به یک تابع گویا خواهد شد. به این ترتیب توابع چند جمله‌ای به نوعی زیرمجموعه‌ای از توابع گویا محسوب می‌شوند. البته توجه داشته باشید که توابع گویا را برحسب توابع چند جمله‌ای معرفی و ساخته‌ایم و از طرفی ادعا می‌کنیم که هر تابع چند جمله‌ای، یک تابع گویا است. این موضوع شاید در ابتدا یک تناقض به نظر برسد، ولی توجه داشته باشید که تعریف توابع چند جمله‌ای برحسب تابع گویا صورت نمی‌گیرد. ولی در شرایطی که گفته شد،
+            تابع گویا و چند جمله‌ای یکسان هستند.
+        </p><br>
+        <h2>مثال:</h2>
+        <p>برای مثال, تابع گویای زیر در تمام مقادیر مجموعه اعداد حقیقی تعریف شده است . <b>زیرا مقدار آن هیچوقت 0 نمیشود !</b>
+        </p><br>
+        <img id='formol' src="{% static 'static/img/formolaTG.jpg' %}" alt="مثال تابع گویا">
+    </section>
+  </body>
+</html>
